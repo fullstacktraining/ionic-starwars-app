@@ -1,0 +1,12 @@
+<ion-view view-title="Films">
+  <ion-content>
+    <ion-item ng-repeat="film in vm.films | orderBy: 'release_date'" href="#/tab/films/{{ $index + 1 }}">
+      <div>
+        <h2>{{ film.title }}</h2>
+        <p><small>Director: {{ film.director }}</small></p>
+        <p><small>Released: {{ film.release_date }}</small></p>
+        <p>{{ film.opening_crawl }}</p>
+      </div>
+    </ion-item>
+  </ion-content>
+</ion-view>
